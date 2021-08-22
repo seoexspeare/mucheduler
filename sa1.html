@@ -3,28 +3,86 @@
 <head>
   <title> 스프링 어웨이크닝 </title>
   <meta charset='utf-8'>
-  <style>
-  h2 {
-    font-size:45px;
-    text-align: center;
-    border-bottom: 1px solid gray;
-    margin-left:150px;
-    margin-right:150px;
-    margin-bottom:10px;
-    padding:20px;
-
-  }
+  <style type = "text/css">
    body{
     margin: 0;
-}
-   img.center
-     {
-     float: center;
-     padding-top: 10px;
-     padding-left: 150px;
    }
+   a {
+     color:black;
+     text-decoration:none;
+   }
+
+   h2 {
+     font-size:45px;
+     text-align: center;
+     border-bottom: 1px solid gray;
+     margin-bottom:10px;
+     padding:20px;
+
+   }
+   h6{
+     font-size : 0.8em;
+     line-height:200%;
+   }
+   #container { margin: 0 auto;}
+   #container #input-form {text-align: center;}
+   #user-table {margin:0 auto; text-align: center;}
+   #input-form {margin-top:10px; margin-bottom: 10px;}
+
+   #user-table {border-collapse: collapse; width :90% }
+   #user-table > thead > tr {background-color : #333; color:#fff;}
+   #user-table > thead > tr > th {padding: 8px; width: 150px;}
+   #user-table > tbody > tr > td {border-bottom : 1px solid gray; padding: 8px;}
   </style>
+  <script type="text/JavaScript" src="http://code.jquery.com/jquery-1.7.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+   $("#keyword").on("keyup",function() {
+    var k = $(this).val();
+    $("#user-table > tbody > tr").hide();
+    var temp = $("#user-table > tbody > tr > td:nth-child(4n+1): contains('"+k+"')");
+    $(temp).parent().show();
+    });
+   });
+  </script>
   </head>
 <body>
   <h2> 스프링 어웨이크닝 </h2>
+  <div id="container">
+     <div id="input-form">
+       배우 이름 : <input type="text" id="keyword"/>
+     </div>
+
+     <table id="user-table">
+       <thead>
+         <tr>
+           <th>공연일시</th>
+           <th>멜키어</th>
+           <th>벤들라</th>
+           <th>모리츠</th>
+         </tr>
+       </thead>
+      <tbody>
+        <tr>
+          <td>7월 27일 19시 30분</td>
+          <td>황휘</td>
+          <td>이정화</td>
+          <td>김현진</td>
+        </tr>
+        <tr>
+          <td>7월 28일 19시 30분</td>
+          <td>노윤</td>
+          <td>김서연</td>
+          <td>김현진</td>
+        </tr>
+        <tr>
+          <td>7월 29일 19시 30분</td>
+          <td>노윤</td>
+          <td>이정화</td>
+          <td>김현진</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
 </body>

@@ -34,23 +34,28 @@
    #user-table > thead > tr > th {padding: 8px; width: 150px;}
    #user-table > tbody > tr > td {border-bottom : 1px solid gray; padding: 8px;}
   </style>
-  <script type="text/JavaScript" src="http://code.jquery.com/jquery-1.7.min.js"></script>
-  <script type="text/javascript">
-  $(document).ready(function() {
-   $("#keyword").on("keyup",function() {
-    var k = $(this).val();
-    $("#user-table > tbody > tr").hide();
-    var temp = $("#user-table > tbody > tr > td:nth-child(4n+1): contains('"+k+"')");
-    $(temp).parent().show();
-    });
-   });
-  </script>
+  <script type="text/JavaScript" src="../project/jquery-3.6.0.min.js"></script>
+
   </head>
 <body>
   <h2> 스프링 어웨이크닝 </h2>
+  <script>
+  $(document).ready(function() {
+           $("#keyword").keyup(function() {
+               var k = $(this).val();
+               $("#user-table > tbody > tr").hide();
+               var temp = $("#user-table > tbody > tr > td:contains('" + k + "')");
+
+
+               $(temp).parent().show();
+
+           })
+
+       })
+      </script>
   <div id="container">
      <div id="input-form">
-       배우 이름 : <input type="text" id="keyword"/>
+       배우 이름 : <input type ="text" id="keyword"/>
      </div>
 
      <table id="user-table">
@@ -62,21 +67,148 @@
            <th>모리츠</th>
          </tr>
        </thead>
+
       <tbody>
         <tr>
-          <td>7월 27일 19시 30분</td>
+          <td>8월 17일 19시 30분</td>
+          <td>노윤</td>
+          <td>김서연</td>
+          <td>이봉준</td>
+        </tr>
+        <tr>
+          <td>8월 18일 19시 30분</td>
           <td>황휘</td>
           <td>이정화</td>
           <td>김현진</td>
         </tr>
         <tr>
-          <td>7월 28일 19시 30분</td>
+          <td>8월 19일 19시 30분</td>
           <td>노윤</td>
+          <td>이정화</td>
+          <td>김현진</td>
+        </tr>
+        <tr>
+          <td>8월 20일 19시 30분</td>
+          <td>황휘</td>
+          <td>김서연</td>
+          <td>이봉준</td>
+        </tr>
+        <tr>
+          <td>8월 21일 15시</td>
+          <td>노윤</td>
+          <td>이정화</td>
+          <td>김현진</td>
+        </tr>
+        <tr>
+          <td>8월 21일 19시</td>
+          <td>노윤</td>
+          <td>이정화</td>
+          <td>김현진</td>
+        </tr>
+        <tr>
+          <td>8월 22일 14시</td>
+          <td>황휘</td>
+          <td>김서연</td>
+          <td>이봉준</td>
+        </tr>
+        <tr>
+          <td>8월 22일 18시</td>
+          <td>황휘</td>
+          <td>김서연</td>
+          <td>이봉준</td>
+        </tr>
+        <tr>
+          <td>8월 24일 19시 30분</td>
+          <td>황휘</td>
+          <td>이정화</td>
+          <td>김현진</td>
+        </tr>
+        <tr>
+          <td>8월 25일 19시 30분</td>
+          <td>노윤</td>
+          <td>김서연</td>
+          <td>이봉준</td>
+        </tr>
+        <tr>
+          <td>8월 26일 19시 30분</td>
+          <td>노윤</td>
+          <td>이정화</td>
+          <td>김현진</td>
+        </tr>
+        <tr>
+          <td>8월 27일 19시 30분</td>
+          <td>황휘</td>
           <td>김서연</td>
           <td>김현진</td>
         </tr>
         <tr>
-          <td>7월 29일 19시 30분</td>
+          <td>8월 28일 15시</td>
+          <td>노윤</td>
+          <td>이정화</td>
+          <td>이봉준</td>
+        </tr>
+        <tr>
+          <td>8월 28일 19시</td>
+          <td>노윤</td>
+          <td>이정화</td>
+          <td>이봉준</td>
+        </tr>
+        <tr>
+          <td>8월 29일 14시</td>
+          <td>황휘</td>
+          <td>김서연</td>
+          <td>김현진</td>
+        </tr>
+        <tr>
+          <td>8월 29일 18시</td>
+          <td>황휘</td>
+          <td>김서연</td>
+          <td>김현진</td>
+        </tr>
+        <tr>
+          <td>8월 31일 19시 30분</td>
+          <td>노윤</td>
+          <td>이정화</td>
+          <td>이봉준</td>
+        </tr>
+        <tr>
+          <td>9월 1일 19시 30분</td>
+          <td>황휘</td>
+          <td>김서연</td>
+          <td>김현진</td>
+        </tr>
+        <tr>
+          <td>9월 2일 19시 30분</td>
+          <td>황휘</td>
+          <td>이정화</td>
+          <td>이봉준</td>
+        </tr>
+        <tr>
+          <td>9월 3일 19시 30분</td>
+          <td>노윤</td>
+          <td>이정화</td>
+          <td>김현진</td>
+        </tr>
+        <tr>
+          <td>9월 4일 15시</td>
+          <td>황휘</td>
+          <td>김서연</td>
+          <td>이봉준</td>
+        </tr>
+        <tr>
+          <td>9월 4일 19시</td>
+          <td>황휘</td>
+          <td>김서연</td>
+          <td>이봉준</td>
+        </tr>
+        <tr>
+          <td>9월 5일 14시</td>
+          <td>노윤</td>
+          <td>이정화</td>
+          <td>김현진</td>
+        </tr>
+        <tr>
+          <td>9월 5일 18시</td>
           <td>노윤</td>
           <td>이정화</td>
           <td>김현진</td>
